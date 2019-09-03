@@ -24,4 +24,26 @@ function popupSort(arr) {
     return arr;
 }
 var arr3 = popupSort(arr)
-console.log(arr3)
+
+/**
+ * 选择排序法：
+ */
+function selectSort(arr) {
+    let minIndex;
+    let len = arr.length;
+    let temp;
+    for (let i = 0; i < len; i++){
+        minIndex = i;
+        for (let j = 0; j < len; j++){
+            if (arr[j] < arr[minIndex]) {
+                minIndex = j;
+            }
+        }
+        temp = arr[i];
+        arr[i] = arr[minIndex];
+        arr[minIndex] = temp;
+    }
+    return arr;
+}
+var arr4 = selectSort(arr)
+console.log(arr4)

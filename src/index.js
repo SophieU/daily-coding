@@ -34,7 +34,7 @@ function selectSort(arr) {
     let temp;
     for (let i = 0; i < len; i++){
         minIndex = i;
-        for (let j = 0; j < len; j++){
+        for (let j = i+1; j < len; j++){
             if (arr[j] < arr[minIndex]) {
                 minIndex = j;
             }

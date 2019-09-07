@@ -23,14 +23,12 @@
         <div id="inner"></div>
     </div>
     <script>
-        var outer = document.getElementById('test')
-        var inner = document.getElementById('inner')
-        outer.addEventListener('click',function(){
-            console.log('outer')
-        },false)
-        inner.addEventListener('click',function(){
-            console.log('inner')
-        },true)
+        var device = (function deviceType(){
+            var ua = window.navigator.userAgent.toLowerCase();
+            var isIpad = ua.match(/iPad/i)==='ipad';
+            var isAndroid = ua.match(/Android/i)==='android';
+            var isWeixin = ua.match(/MicroMessenger/i)==='micromessenger';
+        })()
     </script>
 </body>
 </html>

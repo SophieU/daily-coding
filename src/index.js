@@ -1,2 +1,3 @@
-var str = 'hello word,hello u'
-console.log(str.match(/word/i)[0]=='word')
+var arr = [1, 3, 4, 2, 1, 3, 5]
+var arr2 = new Set(arr);
+console.log(arr2)

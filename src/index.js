@@ -1,11 +1,11 @@
-class Parent {
-    constructor() {
-        this.name='tl'
-    }
+var obj = {
+    name: 'lala',
+    age:10
 }
-class Child extends Parent{
-    constructor() {
-        this.age = 1;
+var test = new Proxy(obj, {
+    set: function (obj, prop, val) {
+        console.log(prop, "is changed to", val)
+        obj[prop] = val;
     }
-}
-var child = new Child()
+})
+test.age = 11;

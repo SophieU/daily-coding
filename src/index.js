@@ -11,5 +11,6 @@ var p3 = new Promise(function (res, rej) {
         res(33)
     }, 2000);
 })
-Promise.all([p1, p2, p3]).then(res => {
+Promise.race([p1, p2, p3]).then(res => {
+    console.log(res)
 })

@@ -1,13 +1,13 @@
-/** 
- * 一、初始化阶段
- *  componentWillMount
- *  render
+/**
+ * first: initiialize stage
+ * componentWillMount
+ * render
  * componentDidMount
- * 二、运行阶段
+ * 2: doing
  * componentWillReciveProps
- * shouldComponentUpdate
+ * shouldCompnentUpdate
  * componentWillUpdate
  * componentDidUpdate
- * 三、销毁阶段
+ * 3: destory
  * componentWillUnmount
  */

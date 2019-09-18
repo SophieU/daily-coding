@@ -1,13 +1,5 @@
 /**
- * first: initiialize stage
- * componentWillMount
- * render
- * componentDidMount
- * 2: doing
- * componentWillReciveProps
- * shouldCompnentUpdate
- * componentWillUpdate
- * componentDidUpdate
- * 3: destory
- * componentWillUnmount
+ * react中的事件处理逻辑？
+ * 1。 react将绑定的事件统一封装为合成事件，这些事件与原生事件共用API，只是为了解决浏览器实现各事件的兼容性问题而进行了封装
+ * 2。react并没有把事件绑定在单一的子元素上，而是统一交由顶层处理，这样在更新DOM时，不用关于该元素上的事件
  */

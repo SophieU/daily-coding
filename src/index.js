@@ -3,3 +3,8 @@ React.createElement({
     props,
     [...children]
 })
+React.cloneElement({
+    element,
+    props,
+    [...children]
+})

@@ -1,1 +1,3 @@
-element和component的区别？
+/**
+ * React.PureComponent
+ */

@@ -1,0 +1,1 @@
+element和component的区别？

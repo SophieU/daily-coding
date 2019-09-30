@@ -22,3 +22,8 @@ React事件处理逻辑？react将将原生事件经过处理成为合成事件�
 
 如何 告诉React它应该编译生产环境版本？
 通过webpack主definePlugin插件设置NODE_ENV为production
+
+调用setState后发生了什么？
+调用setState后，react会将新传入的state对象与组件当前的状态合并，触发调和过程，经过调和过程，react会以
+高效的方法根据新的状态构建React元素树并且着手重新渲染整个UI界面。React得到元素树后，react会自动计算出新的
+树与老树的节点差异，然后根据差异对界面进行最小化渲染

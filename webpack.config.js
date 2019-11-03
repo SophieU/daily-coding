@@ -1,6 +1,6 @@
 const path = require('path')
 
-const config = {
+const config ={
     mode:'development',
     entry:path.resolve(__dirname,'src/index.js'),
     output:{
@@ -8,19 +8,23 @@ const config = {
         filename:'main.js'
     },
     module:{
-        rules:[{
-            test:/\.js$/,
-            exclude:/node_modules/,
-            use:{
-                loader:'babel-loader',
-                options:{
-                    presets:[ "@babel/preset-env"]
+        rules:[
+            {
+                test:/\.js$/,
+                exclude:/node_modules/,
+                use:{
+                    loader:'babel-loader',
+                    options:{
+                        presets:["@babel/preset-env"],
+                        plugins:[
+                            'transform-class-properties',
+                           [ '@babel/plugin-proposal-decorators',{legacy:true}]
+                        ]
+                    }
                 }
             }
-        }]
+        ]
     },
     devtool:'inline-source-map'
-
 }
-
 module.exports = config;

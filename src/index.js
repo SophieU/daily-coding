@@ -1,29 +1,21 @@
 /*
-实现继承的几种方式（7种）： 原型继承，构造函数继承，拷贝继承，实例继承，组合继承，寄生组合继承，Class继承
+    实现继承的几种方式：原型继承，构造函数继承，拷贝继承，实例继承，组合继承，寄生组合继承，Class继承 
 */
-// 原型继承
-// function Parent (name){
-//     this.name=name;
+// 原型继承：子类原型为父类实例, 缺陷：无法继承父类自身属性，子类实例共享同一个原型
+// function Parent1(name){
+//     this.name = name;
 // }
+// function Child1(){}
+// Child1.prototype = new Parent1;
+
+// 构造函数继承 缺陷：子类实例每次创建都会调用父类实例，实例只是子类实例而不是父类的实例
+// function Parent(){}
 // function Child(){
+//     Parent.call(this)
 // }
-// Child.prototype = new Parent()
+// var child  = new Child()
 
-// 构造函数
-// function Parent(name){
-//     this.name=name;
-// }
-// function Child(name){
-//     Parent.call(this,name)
-//     this.age=12;
-// }
+// 拷贝继承  子类原型复制父类方法，
 
-// 实例继承
-function Parent(name){
-    this.name=name;
-}
-function Child(name){
-   var instance = new Parent(name)
-   instance.age=12;
-   return instance
-}
+console.log(child instanceof Child)
+console.log(child instanceof Parent)

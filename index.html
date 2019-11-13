@@ -5,22 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="./index.css">
-    <style>
-        div{
-            display:none;
-            visibility:hidden;
-            position:absolute;left:-9999999999;
-            text-indent: -99999999px;
-        }
-    </style>
+   <style>
+       *{
+        margin: 0;
+        padding: 0;
+       }
+       #outer{
+           width: 300px;
+           height: 300px;
+           border: 1px solid #ddd;
+           background: #ddd;
+       }
+       #inner{
+           width: 200px;
+           height: 200px;
+           background: #f00;
+       }
+
+   </style>
 </head>
 <body>
-    <form >
-        <input autocomplete type="text">
-        <textarea name="x" id="1" cols="10" rows="asdfasf"></textarea>
-        <button>submit</button>
-    </form>
-    <script src="./dist/main.js"></script>
+    <div id="outer"> 
+        <div id="inner"></div>
+    </div>
+   
+    <script>
+        var outer = document.querySelector('#outer')
+        var inner = document.querySelector('#inner')
+        outer.addEventListener('click',function(){
+           alert('outer')
+        },false)
+        inner.addEventListener('click',function(){
+           alert('inner')
+        },false)
+    </script>
 </body>
 </html>

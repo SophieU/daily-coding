@@ -30,14 +30,19 @@
     </div>
    
     <script>
-        var outer = document.querySelector('#outer')
-        var inner = document.querySelector('#inner')
-        outer.addEventListener('click',function(){
-           alert('outer')
-        },false)
-        inner.addEventListener('click',function(){
-           alert('inner')
-        },false)
+     function create(){
+         var obj = {};
+         var Con = Array.prototype.shift.call(arguments)
+         obj.__proto__ = Con.prototype;
+         var res = Con.apply(obj,arguments);
+         return typeof res === 'object'?rse:obj;
+     }
+     function Test(){
+        console.log(this)
+
+         this.name = '张三'
+     }
+     var test = create(Test)
     </script>
 </body>
 </html>

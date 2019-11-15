@@ -30,19 +30,14 @@
     </div>
    
     <script>
-     function create(){
-         var obj = {};
-         var Con = Array.prototype.shift.call(arguments)
-         obj.__proto__ = Con.prototype;
-         var res = Con.apply(obj,arguments);
-         return typeof res === 'object'?rse:obj;
-     }
-     function Test(){
-        console.log(this)
-
-         this.name = '张三'
-     }
-     var test = create(Test)
+        var outer = document.getElementById('outer')
+        var inner = document.getElementById('inner')
+        outer.addEventListener('click',function(){
+            console.log('outer')
+        }, false)
+        inner.addEventListener('click',function(){
+            console.log('inner')
+        },false)
     </script>
 </body>
 </html>

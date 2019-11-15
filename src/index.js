@@ -1,10 +1,4 @@
 /**
- * 继承的几种实现方法：原型继承，构造函数继承，拷贝继承，实例继承，组合继承，寄生组合继承，ES6继承
- * 原型继承 ： Child.prototype = new Parent()
- * 构造函数继承： Parent.call(this)
- * 拷贝继承： Child.prototype[key] = Parent[key]
- * 实例继承：var instance = new Parent() return instance
- * 组合继承：Child.prototype = new Parent() Parent.call(this)
- * 寄生组合继承： Child.prototype = Object.create(Parent.prototype,{contractor:Child,enumberable:false,configurable:true,writable:true})
- * 
- */
+ * 闭包：函数A内包含了函数B，且B使用了A内部变量，并将B返回的形式
+ * 闭包作用：例变量常驻内存，实现变量私有化，只在内部可以使用。
+ *   */ 

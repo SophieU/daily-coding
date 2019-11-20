@@ -6,28 +6,55 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
    <style>
-      
-       #outer{
-           width: 300px;
-           height: 300px;
-           border: 1px solid #ddd;
-           background: #ddd;
-       }
-       #inner{
-           width: 100px;
-           height: 200px;
-           background: #ff0;
-       }
+  [class*="bg__"] {
+      height: 50vh;
+    /* text-indent: -9999px; */
+    /* fix background */
+    background-attachment: fixed;
+    /* center it */
+    background-position: center center;
+    /* Scale it nicely to the element */
+    background-size: cover;
+    /* just make it look a bit better 😉 */
+}
+[class*="bg__"]:nth-child(2n) {
+  box-shadow: inset 0 0 1em #111;
+}
+
+.bg__foo {
+background-image: url(
+  http://www.webhek.com/wordpress/wp-content/uploads/2014/07/parallax1.jpg
+);
+}
+
+.bg__bar {
+background-image: url(
+  http://www.webhek.com/wordpress/wp-content/uploads/2014/07/parallax2.jpg
+);
+}
+
+.bg__baz {
+background-image: url(
+  http://www.webhek.com/wordpress/wp-content/uploads/2014/07/parallax3.jpg
+);
+}
+
+.bg__bazz {
+height: 100vh;
+
+background-image: url(
+  http://www.webhek.com/wordpress/wp-content/uploads/2014/07/parallax1.jpg
+);
+}
 
    </style>
 </head>
 <body>
-    <div id="outer"> 
-        <div id="inner">hahaha</div>
-    </div>
-   
-    <script>
-       
-    </script>
+    <div class="parallax">
+        <div class="bg__foo">foo</div>
+        <div class="bg__bar">bar</div>
+        <div class="bg__baz">baz</div>
+        <div class="bg__bazz">bazz</div>
+      </div>
 </body>
 </html>

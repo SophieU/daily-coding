@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
     <style>
         #test{
             width:100px;
@@ -20,15 +19,23 @@
 </head>
 <body>
     <div id="test">
-        <div id="inner"></div>
+       <input type="text" id="mvvm">
+       <p id="view"></p>
     </div>
     <script>
-        var device = (function deviceType(){
-            var ua = window.navigator.userAgent.toLowerCase();
-            var isIpad = ua.match(/iPad/i)==='ipad';
-            var isAndroid = ua.match(/Android/i)==='android';
-            var isWeixin = ua.match(/MicroMessenger/i)==='micromessenger';
-        })()
+       var input = document.querySelector('#mvvm')
+       var view = document.querySelector('#view')
+       var obj = {}
+       Object.defineProperty(obj,'text',{
+           set(val){
+               input.val=val;
+               this.val=val;
+               view.innerHTML=val;
+           }
+       })
+       input.onkeyup= function(e){
+           obj.val = e.target.value;
+       }
     </script>
 </body>
 </html>

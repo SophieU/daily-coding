@@ -1,12 +1,21 @@
-/**
- * !important>id>class>tag
- * 
- */
-1. 就近原则，后添加的样式会覆盖前端的样式
-2. 行内样式》内联样式》外联样式
-3.!important大于一切样式
-
-行内样式 1000
-id 100
-class 属性 10
-标签伪元素1
+Function.prototype.myCall = function (context) {
+    context = context || window;
+    let args = Array.prototype.slice.call(arguments, 1);
+    context.fn = this;
+    var res = context.fn(...args);
+    delete context.fn;
+    return res;
+}
+Function.prototype.myApply = function (context) {
+    context = context || window;
+    let args = Array.prototype.slice.call(arguments, 1)
+    context.fn = this;
+    let res;
+    if (args.length > 0) {
+        res= context.fn(...args)
+    } else {
+        res = context.fn();
+    }
+    delete context.fn;
+    return res;
+}

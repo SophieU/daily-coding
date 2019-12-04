@@ -1,21 +1,13 @@
-Function.prototype.myCall = function (context) {
-    context = context || window;
-    let args = Array.prototype.slice.call(arguments, 1);
-    context.fn = this;
-    var res = context.fn(...args);
-    delete context.fn;
-    return res;
-}
-Function.prototype.myApply = function (context) {
-    context = context || window;
-    let args = Array.prototype.slice.call(arguments, 1)
-    context.fn = this;
-    let res;
-    if (args.length > 0) {
-        res= context.fn(...args)
-    } else {
-        res = context.fn();
+Function.prototype.myBind = function () {
+    if (typeof this !== 'function') {
+        return;
     }
-    delete context.fn;
-    return res;
+    var context = [].shift.call(arguments);
+    var args = arguments;
+    var fn = this;
+    return function F() {
+        var _this = this instanceof fn ? this : context;
+        var argsInner = args.concat(Array.from(arguments));
+        return fn.apply(_this,argsInner)
+    }
 }

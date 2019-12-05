@@ -19,16 +19,28 @@
     </style>
 </head>
 <body>
-    <div id="test">
-        <div id="inner"></div>
-    </div>
+    <input type="text" id="input">
+    <span id="span">default</span>
     <script>
-        var device = (function deviceType(){
-            var ua = window.navigator.userAgent.toLowerCase();
-            var isIpad = ua.match(/iPad/i)==='ipad';
-            var isAndroid = ua.match(/Android/i)==='android';
-            var isWeixin = ua.match(/MicroMessenger/i)==='micromessenger';
-        })()
+       const data = {
+            text :'default'
+        }
+    const input = document.getElementById('input')
+    const span = document.getElementById('span')
+
+const handler = {
+    set(target, key, value) {
+        target[key] = value;
+        input.value = value;
+        span.innerHTML = value;
+        console.log(111)
+        return value;
+    }
+}
+const proxy = new Proxy(data,handler)
+input.addEventListener('keyup',function(e){
+    proxy.text = e.target.value;
+},false)
     </script>
 </body>
 </html>

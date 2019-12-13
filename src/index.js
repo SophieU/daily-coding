@@ -11,3 +11,5 @@ Function.prototype.myBind = function () {
         return fn.apply(_this,argsInner)
     }
 }
+
+console.log( [].toString())

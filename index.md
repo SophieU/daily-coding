@@ -25,3 +25,11 @@
 - 高级专家：能够创造业界的解决方案，并且肩挑团队的未来
 
 ## 当前目标
+
+
+- master: 线上稳定版本分支（受保护）
+- develop: 开发环境最新分支（受保护）
+- feature: 功能开发分支前缀，
+    - 成员每次从develop拉取新代码后，本地创建Feature/xxx分支进行开发，功能完成后推送---> 申请merge request (feature 到 develop)---> code review过程 ---> 合并入develop
+- release： 预发布分支（用于上线前全功能测试）
+- hotfix: 从master分支拉取下来新建的hotfix/xxx分支，用于修改线上bug

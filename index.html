@@ -19,23 +19,36 @@
 </head>
 <body>
     <div id="test">
-       <input type="text" id="mvvm">
-       <p id="view"></p>
+        <child></child>
     </div>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
     <script>
-       var input = document.querySelector('#mvvm')
-       var view = document.querySelector('#view')
-       var obj = {}
-       Object.defineProperty(obj,'text',{
-           set(val){
-               input.val=val;
-               this.val=val;
-               view.innerHTML=val;
+         Vue.component('child-son',{
+            props:['test'],
+            template:`<div>{{$attrs}}</div>`,
+            mounted(){
+                console.log(this.$attrs)
+            }
+        })
+        Vue.component('child',{
+            props:['label'],
+            components:'child-son',
+            template:`<div>
+                    {{label}}
+                    {{$attrs}}
+                    <child-son test="123"></child1-son>
+                </div>`,
+            mounted(){
+                console.log(this.$attrs)
+            }
+        })
+       
+       var el = new Vue({
+           el:'#test',
+           data:{
+               test:111
            }
        })
-       input.onkeyup= function(e){
-           obj.val = e.target.value;
-       }
     </script>
 </body>
 </html>

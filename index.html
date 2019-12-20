@@ -18,6 +18,7 @@
     </style>
 </head>
 <body>
+<<<<<<< HEAD
     <div id="test">
         <child></child>
     </div>
@@ -49,6 +50,30 @@
                test:111
            }
        })
+=======
+    <input type="text" id="input">
+    <span id="span">default</span>
+    <script>
+       const data = {
+            text :'default'
+        }
+    const input = document.getElementById('input')
+    const span = document.getElementById('span')
+
+const handler = {
+    set(target, key, value) {
+        target[key] = value;
+        input.value = value;
+        span.innerHTML = value;
+        console.log(111)
+        return value;
+    }
+}
+const proxy = new Proxy(data,handler)
+input.addEventListener('keyup',function(e){
+    proxy.text = e.target.value;
+},false)
+>>>>>>> 74a9938f6a89d6c62fab57468f11761180e86b76
     </script>
 </body>
 </html>

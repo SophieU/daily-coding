@@ -1,30 +1,18 @@
-const path = require('path')
+const webpack = require('webpack')
 
-const config ={
-    mode:'development',
-    entry:path.resolve(__dirname,'src/index.js'),
-    output:{
-        path:path.resolve(__dirname,'dist'),
-        filename:'main.js'
+module.exports = {
+    entry: {
+        vendor: ['jquery','loadsh']
     },
-    module:{
-        rules:[
-            {
-                test:/\.js$/,
-                exclude:/node_modules/,
-                use:{
-                    loader:'babel-loader',
-                    options:{
-                        presets:["@babel/preset-env"],
-                        plugins:[
-                            'transform-class-properties',
-                           [ '@babel/plugin-proposal-decorators',{legacy:true}]
-                        ]
-                    }
-                }
-            }
-        ]
+    output: {
+        path: __dirname + '/dll',
+        filename: '[name].dll.js',
+        library:'[name]_library'
     },
-    devtool:'inline-source-map'
+    plugins: [
+        new webpack.DllPlugin({
+            path: __dirname + '/dll/[name]-manifest.json',
+            name:'[name]_library'
+        })
+    ]
 }
-module.exports = config;

@@ -2,78 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
-    <style>
-        #test{
-            width:100px;
-            border: 1px solid #ddd;
-           
-        }
-        #inner{
-            width:10px;
-            padding-top: 20%;
-            background: #ff0;
-        }
-    </style>
 </head>
 <body>
-<<<<<<< HEAD
-    <div id="test">
-        <child></child>
-    </div>
-    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
-    <script>
-         Vue.component('child-son',{
-            props:['test'],
-            template:`<div>{{$attrs}}</div>`,
-            mounted(){
-                console.log(this.$attrs)
-            }
-        })
-        Vue.component('child',{
-            props:['label'],
-            components:'child-son',
-            template:`<div>
-                    {{label}}
-                    {{$attrs}}
-                    <child-son test="123"></child1-son>
-                </div>`,
-            mounted(){
-                console.log(this.$attrs)
-            }
-        })
-       
-       var el = new Vue({
-           el:'#test',
-           data:{
-               test:111
-           }
-       })
-=======
-    <input type="text" id="input">
-    <span id="span">default</span>
-    <script>
-       const data = {
-            text :'default'
-        }
-    const input = document.getElementById('input')
-    const span = document.getElementById('span')
-
-const handler = {
-    set(target, key, value) {
-        target[key] = value;
-        input.value = value;
-        span.innerHTML = value;
-        console.log(111)
-        return value;
-    }
-}
-const proxy = new Proxy(data,handler)
-input.addEventListener('keyup',function(e){
-    proxy.text = e.target.value;
-},false)
->>>>>>> 74a9938f6a89d6c62fab57468f11761180e86b76
+    <script >
+       Array.prototype.slice.call(arguments)
     </script>
 </body>
 </html>

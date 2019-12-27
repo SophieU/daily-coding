@@ -1,4 +1,3 @@
-/**
- * 
- * JS
- */
+function throttle(){
+    
+}

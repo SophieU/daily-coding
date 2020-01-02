@@ -9,10 +9,7 @@ function HashTable (){
         }
         return hash % 37; //公认规则 取余37
     }
-    // 散列函数二—————为了解决Hash表的冲突问题
-    var djb2HashCode = function(){
 
-    }
     this.put = function(key,value){
         var position = loseloseHashCode(key)
         items[position] = value

@@ -7,8 +7,8 @@ var arr = [
   ]
 
 var searchMatrix = function(matrix, target) {
-    var arr = matrix.flat()
-    return arr.indexOf(target)>-1
+   var strArr = JSON.stringify(matrix)
+   return strArr.indexOf(target)>-1
 };
 
   console.log(searchMatrix(arr,5))

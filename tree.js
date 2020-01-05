@@ -7,8 +7,19 @@ var arr = [
   ]
 
 var searchMatrix = function(matrix, target) {
-   var strArr = JSON.stringify(matrix)
-   return strArr.indexOf(target)>-1
+  if(matrix.length===0) return false;
+  var row = 0;
+  var column = matrix[0].length-1
+  while(row<matrix.length&&column>=0){
+    if(matrix[row][column]===target){
+      return true
+    }else if(matrix[row][column]>target){
+      column -- 
+    }else{
+      row++
+    }
+  }
+  return false
 };
 
   console.log(searchMatrix(arr,5))

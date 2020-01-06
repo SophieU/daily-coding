@@ -33,3 +33,11 @@
     - 成员每次从develop拉取新代码后，本地创建Feature/xxx分支进行开发，功能完成后推送---> 申请merge request (feature 到 develop)---> code review过程 ---> 合并入develop
 - release： 预发布分支（用于上线前全功能测试）
 - hotfix: 从master分支拉取下来新建的hotfix/xxx分支，用于修改线上bug
+
+# 优化
+请求数量，请求带宽，缓存，页面结构，代码校验
+资源合并，CSS雪碧图，
+Gzip压缩，使用CDN，图片优化，压缩文件
+DNS预解析减少DNS查询次数，开启Expires，Cache-Control，Etag，Modified，
+CSS放头，JS放脚
+不用CSS表达式，避免重定向

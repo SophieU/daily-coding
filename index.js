@@ -1,14 +1,14 @@
-var arr = [5,2,3,1,6,9,7,8]
-function bubble(arr) {
-    if (!arr.length) return arr
-    for (let i = arr.length-1; i>0; i--){
-        for (let j = 0; j < i; j++){
-            if (arr[j] > arr[j + 1]) {
-                let temp = arr[j]
-                arr[j] = arr[j + 1]
-                arr[j+1] = temp
-            }
-        }
+function getme() {
+    var men = process.memoryUsage()
+    var format = function (bytes) {
+        return (bytes/1024/1024).toFixed(2)+"MB"
     }
-    return arr
+    console.log('heapTotal: '+format(men.heapTotal)+)
 }
+
+var size = 20 * 1024 * 1024
+var arrall = []
+for (var i = 0; i < 20; i++){
+    arrall.push(new Array(size));
+}
+

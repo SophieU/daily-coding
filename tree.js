@@ -1,25 +1,33 @@
-var arr = [
-    [1,   4,  7, 11, 15],
-    [2,   5,  8, 12, 19],
-    [3,   6,  9, 16, 22],
-    [10, 13, 14, 17, 24],
-    [18, 21, 23, 26, 30]
-  ]
+function BST() {
+  var root = null
+  var length = 0
 
-var searchMatrix = function(matrix, target) {
-  if(matrix.length===0) return false;
-  var row = 0;
-  var column = matrix[0].length-1
-  while(row<matrix.length&&column>=0){
-    if(matrix[row][column]===target){
-      return true
-    }else if(matrix[row][column]>target){
-      column -- 
-    }else{
-      row++
-    }
+  function Node(value) {
+    this.left = null
+    this.right = null
+    this.value = value
   }
-  return false
-};
+  function addNode(node,v) {
+    if (!node) {
+      length++
+      return new Node(v)
+    }
+    if (node.value > v) {
+      node.left = addNode(node.left,v)
+    } else if (node.value < v) {
+      node.right = addNode(node.right,v)
+    }
+    return node
+  }
 
-  console.log(searchMatrix(arr,5))
+  this.addNode = function (value) {
+     root = addNode(root,value)
+  }
+
+  this.isEmpty = function () {
+    return this.length === 0
+  }
+  this.getLength = function () {
+    return this.length
+  }
+}

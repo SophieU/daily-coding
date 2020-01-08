@@ -53,4 +53,40 @@ var searchMatrix = function(matrix, target) {
     }
     return false
 };
-console.log(searchMatrix(arr2,5))
+function Stack() {
+    var items = []
+    this.push = function (item) {
+        items.push(item)
+    }
+    this.pop = function () {
+        return item.pop
+    }
+    this.peek = function () {
+        return items[items.length-1]
+    }
+    this.getLength = function () {
+        return items.length
+    }
+}
+// 匹配括号
+function swap(str) {
+    let map = {
+        '(': 1,
+        ')': -1,
+        '[': 2,
+        ']': -2,
+        '{': 3,
+        '}':-3
+    }
+    var stack = new Stack()
+    for (let i = 0; i < str.length;i++) {
+        if (map[str[i]] > 0) { 
+            stack.push(str[i])
+        } else {
+            let last = stack.pop()
+            if(map[last]+map[str[i]]!==0) return false
+        }
+    }
+    if(stack.getLength()>0) return false
+    return true
+}

@@ -90,3 +90,28 @@ function swap(str) {
     if(stack.getLength()>0) return false
     return true
 }
+
+// 去重
+var arr =[-1,-100,3,99]
+var removeDuplicates = function(nums) {
+    let len = nums.length
+    for (let i = 0; i < len;){
+        if (nums.slice(0, i).indexOf(nums[i]) !== -1) {
+            nums.splice(i,1)
+            len--
+        } else {
+            i++
+        }
+    }
+    console.log(nums)
+    return nums.length
+};
+
+
+var rotate = function (nums, k) {
+    for (let i = 0; i < k; i++){
+        nums.unshift(nums.pop())
+    }
+    console.log(nums)
+};
+rotate(arr,2)

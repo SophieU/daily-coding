@@ -114,4 +114,43 @@ var rotate = function (nums, k) {
     }
     console.log(nums)
 };
-rotate(arr,2)
+
+
+var intersect = function (nums1, nums2) {
+  var res = []
+    for (let i = 0; i < nums1.length; i++){
+        let target = nums1[i]
+        if (nums2.indexOf(target) === -1) {
+            continue
+        } else {
+            res.push(...nums2.splice(nums2.indexOf(target),1))
+        }
+    }
+    return res
+};
+function checkNum(num) {
+    if (num < 9) {
+        return num+1
+    } else {
+        return 0
+    }
+}
+var plusOne = function (digits) {
+    
+    let len = digits.length - 1;
+    for (let i = len; i >=0;){
+        if (digits[i] === 9) {
+            digits.splice(i, 1, checkNum(digits[i]))
+            i--
+        } else {
+            digits.splice(i, 1, checkNum(digits[i]))
+            break
+        }
+    }
+    if (digits[0] === 0 && digits.length > 0) {
+        digits.unshift(1)
+    }
+    return digits
+};
+console.log(plusOne([0]))
+

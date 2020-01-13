@@ -152,5 +152,34 @@ var plusOne = function (digits) {
     }
     return digits
 };
-console.log(plusOne([0]))
+
+
+var moveZeros = function (nums) {
+    let len = nums.length
+    let i = 0;
+    let count = 0;
+    while (count < len) {
+        count++;
+        if (nums[i] === 0) {
+            nums.push(nums.splice(i, 1)[0])
+        } else {
+            i++
+        }
+    }
+  
+    return nums
+}
+
+var twoSum = function(nums, target) {
+    var map = {}
+    for (let i in nums) {
+        const reduce = target - nums[i]
+        if (typeof map[reduce]!=='undefined') {
+            return [map[reduce],i]
+        } 
+        map[nums[i]] = i
+    }
+};
+var nums = [2, 7, 11, 15], target = 9
+console.log(twoSum(nums, target))
 

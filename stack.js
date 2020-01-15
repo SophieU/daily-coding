@@ -62,4 +62,5 @@ class Stack2 {
 var stack2 = new Stack2()
 stack2.push(1)
 stack2.stack = ['222']
-console.log(stack2.stack)
+
+

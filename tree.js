@@ -6,6 +6,9 @@
  * false,0,'',undefined,null,NaN
  * 
  * 类型转换：valueOf->toString->toPrimitive
+ * 
+ * 每个函数都有一个prototype属性，该属性指向函数的原型对象，而每个对象也都有一个__proto__属性指向了创建该
+ * 对象的函数的原型对象prototye
  */
 
  let a = {

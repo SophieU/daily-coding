@@ -12,10 +12,22 @@
 
 ## Chrome Developer Tools
 ###  Chrome开发工具
-> 谷歌chrome开发工具，是基于谷歌浏览器内含的一套网页制作和调试工具，开发者工具允许网页开发者深入浏览器和网页应用程序的内部。该工具可以有效地追踪布局问题，设置JS断点并可深入理解代码的最优化策略。Chrome开发工具一共提供了8大组工具：
+> 谷歌chrome开发工具，是基于谷歌浏览器内含的一套网页制作和调试工具，开发者工具允许网页开发者深入浏览器和网页应用程序的内部。该工具可以有效地追踪布局问题，设置JS断点并可深入理解代码的最优化策略。Chrome开发工具一共提供了8大组工具(通过`Ctrl+M`打开Debug后会跳到Chrome中)：
 - Element面板：用于查看和编辑当前页面中的HTML和CSS元素
 - Network面板：用于查看HTTP请求的详细信息，如请求头，响应头及返回内容等
 - Source面板：用于查看和调试当前页面所加载的脚本的源文件
 - TimeLine面板：用于查看脚本的执行时间，页面元素渲染时间等信息
 - Profiles面板：用于查看CPU执行时间与内存占用等信息
 - Resource面板：用于查看当前页面所请求的资源文件，如HTML，CSS样式文件等。
+- Audits面板：用于优化前端页面，加速网页加载速度等
+- Console面板：用于显示 中所输出的调试信息，或运行测试脚本等
+> 对于高度ReactNative应用来说，Sources和Console是使用频率很高的两个工具
+
+### 如何通过Chrome高度React Native程序 ？
+1. 启动远程调试
+> 在Developer Menu下单击“Debug”启动JS远程高度功能，此时Chrome会被打开，同时创建一个“htto://localhost:8081/debugger-ui”Tab页
+2. 打开Chrome开发者工具
+> 在Tab页下打开开发者工具，（F12）
+3. 在Android上调试：
+> 在Android 5.0以上设备上，通过USB连接到电脑，然后通过命令行工具设置端口转发
+`adb reverse tcp:8081 tcp:80810`,也可以通过在“Developer Menu"下的”Dev Settings“中设置你的电脑IP为进行调试。

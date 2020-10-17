@@ -28,11 +28,6 @@ vue.prototype.observer = function(obj){
         }
     }
 }
-//读取视图模板，生成AST语法树
-vue.prototype.render = function(){
-    this.virtualdom = 'i am ' +this.$data.a;
-    this.el.innerHTML = this.virtualdom
-}
 
 var obj = {a:111,b:222}
 var obj1 = new Proxy(obj,{

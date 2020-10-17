@@ -31,12 +31,7 @@ vue.prototype.observer = function(obj){
 
 var obj = {a:111,b:222}
 var obj1 = new Proxy(obj,{
-    /**
-     * 
-     * @param {object} target
-     * @param {string} key    监听的对象属性名
-     * @param {object} receiver  生成的proxy实例本身
-     */
+   
     get:function(target,key,receiver){
         // Reflect.get是在proxy中可以直接使用的方法
         return Reflect.get(target,key)

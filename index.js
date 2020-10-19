@@ -30,13 +30,3 @@ vue.prototype.observer = function(obj){
 }
 
 var obj = {a:111,b:222}
-var obj1 = new Proxy(obj,{
-   
-    get:function(target,key,receiver){
-        // Reflect.get是在proxy中可以直接使用的方法
-        return Reflect.get(target,key)
-    },
-    set:function(target,key,value,receiver){
-        return Reflect.set(target,key,value)
-    }
-})

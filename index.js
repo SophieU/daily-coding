@@ -29,4 +29,4 @@ vue.prototype.observer = function(obj){
     }
 }
 
-var obj = {a:111,b:222}
+

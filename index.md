@@ -14,5 +14,4 @@
 })(window)
 
 $('div').css()
-console.log($('div').css == $('p').css) // false  --> 问题点：性能
 ```

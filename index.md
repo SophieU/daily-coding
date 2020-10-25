@@ -13,5 +13,4 @@
     global.$ = global.Libary = Libary
 })(window)
 
-$('div').css()
 ```

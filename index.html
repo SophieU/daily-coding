@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            height: 100px;
+            width: 100%;
+            display: flex;
+        }
+        .item{
+            flex: 1;
+        }
+        .item:nth-child(1){
+            background: pink;
+        }
+        .item:nth-child(2){
+            background: purple;
+        }
+        .item:nth-child(3){
+            background:blue
+        }
+        .inner{
+            width: 0;
+            height: 0;
+            border: 20px solid;
+            border-color:#ff9600 #3366ff #12ad2a #f0eb7a;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+       <div class="item">
+           <p class="inner"></p>
+       </div>
+       <div class="item">2</div>
+       <div class="item">2</div>
+   </div>
+</body>
+</html>

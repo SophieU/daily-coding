@@ -1,6 +1,7 @@
 #! /usr/bin/env node
 
 const program = require('commander')
+const chalk = require('chalk')
 const version = require('../package.json').version;
 
 // 定义当前版本

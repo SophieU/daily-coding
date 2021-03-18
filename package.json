@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/SophieU/daily-coding/issues"
   },
-  "homepage": "https://github.com/SophieU/daily-coding#readme"
+  "homepage": "https://github.com/SophieU/daily-coding#readme",
+  "dependencies": {
+    "commander": "^7.1.0"
+  }
 }

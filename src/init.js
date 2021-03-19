@@ -1,1 +1,6 @@
-console.log('this is init.js')
+const download = require('download-git-repo')
+const tmpAdd = require('../template.json').admin
+
+download(`direct:${tmpAdd}`, 'my-app',{clone: true}, err=>{
+    console.log(err)
+})

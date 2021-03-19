@@ -21,6 +21,7 @@
   "homepage": "https://github.com/SophieU/daily-coding#readme",
   "dependencies": {
     "chalk": "^4.1.0",
-    "commander": "^7.1.0"
+    "commander": "^7.1.0",
+    "download-git-repo": "^3.0.2"
   }
 }

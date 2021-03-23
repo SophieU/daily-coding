@@ -1,0 +1,200 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+
+
+
+
+
+
+<html>
+<head>
+    <title>研发云</title>
+    
+    <!--    
+            <link type="text/css" rel="stylesheet" href="/cas/css/cas.css;jsessionid=A108AC44113B82E5F39DD03A20F56ED9-n1" />  -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="icon" href="/cas/favicon.ico;jsessionid=A108AC44113B82E5F39DD03A20F56ED9-n1" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="/cas/css/app.css;jsessionid=A108AC44113B82E5F39DD03A20F56ED9-n1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+<body class="sign-body">
+
+
+<div class="signin">
+    <a href="https://www.bigcloudsys.cn:8443" onclick="javascript:void(0)" class="sign-logo"><img src="/cas/images/logo.png;jsessionid=A108AC44113B82E5F39DD03A20F56ED9-n1"/></a>
+    <form id="login_fm" class="fm-v clearfix" action="/cas/login;jsessionid=A108AC44113B82E5F39DD03A20F56ED9-n1?service=http%3a%2f%2ftools.bigcloudsys.cn%2fcas%2flogin%3fservice%3dhttp%253A%252F%252Ftools.bigcloudsys.cn%252Fgitlab%252Fusers%252Fauth%252Fcas3%252Fcallback%253Furl" method="post">
+        <div class="singn-inner">
+            <div class="form-tab J_Tabs">
+
+
+
+
+            </div>
+            
+            <div id="picMsg" class="error"></div>
+            <div class="row fl-controls-left">
+                <i class="icon-user"></i>
+                
+
+                
+                    
+                    <input id="username" name="username" class="required" tabindex="1" cmcc-ajax="https://idmp.bigcloudsys.cn/casmanage/user/agreement" placeholder="邮箱" accesskey="n" type="text" value="" size="25" autocomplete="false"/>
+                
+            </div>
+
+            <div class="row fl-controls-left">
+                <i class="icon-sms"></i>
+                <input id="smscode" name="smscode" class="required w154" tabindex="4" placeholder="短信验证码" type="text" value="" size="6" autocomplete="off">
+                <input id="smsbtn" value="获取" type="button" class="smsbtn" cmcc-ajax="/cas/sendsmscode">
+            </div>
+
+            <div class="row fl-controls-left">
+                <i class="icon-password"></i>
+                    
+                
+                <input id="password" name="password" class="required" tabindex="2" placeholder="密码" accesskey="p" type="password" value="" size="25" autocomplete="off"/>
+            </div>
+
+
+
+
+
+            <div class="row fl-controls-left J_CompanyList">
+                <i class="icon-company"></i>
+                <select placeholder="请选择单位" style="height: 40px;"  id="companyList" name="company2" class="select-style">
+                    <option value="###">请选择</option>
+                    <option value="铁通公司">铁通公司</option>
+                    <option value="设计院">设计院</option>
+                    <option value="国际公司">国际公司</option>
+                    <option value="终端公司">终端公司</option>
+                    <option value="政企分公司">政企分公司</option>
+                    <option value="财务公司">财务公司</option>
+                    <option value="物联网公司">物联网公司</option>
+                    <option value="苏州研发中心">苏州研发中心</option>
+                    <option value="杭州研发中心">杭州研发中心</option>
+                    <option value="在线服务公司">在线服务公司</option>
+                    <option value="咪咕公司">咪咕公司</option>
+                    <option value="互联网公司">互联网公司</option>
+                    <option value="投资公司">投资公司</option>
+                    <option value="信息技术公司">信息技术公司</option>
+                    <option value="研究院">研究院</option>
+                    <option value="移动学院">移动学院</option>
+                    <option value="信息港中心">信息港中心</option>
+                    <option value="信安中心">信安中心</option>
+                    <option value="采购共享中心">采购共享中心</option>
+                    <option value="卓望公司">卓望公司</option>
+                    <option value="辛姆巴科">辛姆巴科</option>
+                    <option value="香港公司">香港公司</option>
+                    <option value="上海产业研究院">上海产业研究院</option>
+                    <option value="成都产业研究院">成都产业研究院</option>
+                    <option value="雄安产业研究院">雄安产业研究院</option>
+                    <option value="集团公司">集团公司</option>
+                    <option value="北京公司">北京公司</option>
+                    <option value="天津公司">天津公司</option>
+                    <option value="河北公司">河北公司</option>
+                    <option value="山西公司">山西公司</option>
+                    <option value="内蒙古公司">内蒙古公司</option>
+                    <option value="辽宁公司">辽宁公司</option>
+                    <option value="吉林公司">吉林公司</option>
+                    <option value="黑龙江公司">黑龙江公司</option>
+                    <option value="上海公司">上海公司</option>
+                    <option value="江苏公司">江苏公司</option>
+                    <option value="浙江公司">浙江公司</option>
+                    <option value="安徽公司">安徽公司</option>
+                    <option value="福建公司">福建公司</option>
+                    <option value="江西公司">江西公司</option>
+                    <option value="山东公司">山东公司</option>
+                    <option value="河南公司">河南公司</option>
+                    <option value="湖北公司">湖北公司</option>
+                    <option value="湖南公司">湖南公司</option>
+                    <option value="广东公司">广东公司</option>
+                    <option value="广西公司">广西公司</option>
+                    <option value="海南公司">海南公司</option>
+                    <option value="重庆公司">重庆公司</option>
+                    <option value="四川公司">四川公司</option>
+                    <option value="贵州公司">贵州公司</option>
+                    <option value="云南公司">云南公司</option>
+                    <option value="西藏公司">西藏公司</option>
+                    <option value="陕西公司">陕西公司</option>
+                    <option value="甘肃公司">甘肃公司</option>
+                    <option value="宁夏公司">宁夏公司</option>
+                    <option value="青海公司">青海公司</option>
+                    <option value="新疆公司">新疆公司</option>
+                    <option value="计划建设部">计划建设部</option>
+                    <option value="市场经营部">市场经营部</option>
+                    <option value="网络部">网络部</option>
+                    <option value="技术部">技术部</option>
+                </select>
+            </div>
+
+
+
+
+
+
+
+
+            	
+            <div class="row">
+                
+                <input id="captcha" placeholder="验证码" type="text" autocomplete="off"  style="width:110px;padding-left: 10px;" value="" tabindex="3" name="captcha" >
+                <img id="randImage" class="randImg">
+                <a id="randImageLink" class="icon-refresh" title="换一张"></a>
+            </div>
+            <div class="row J_AgreeBox agreebox" style="display:none;">
+                <input type="checkbox" class="J_Agree inputagree"><a href="https://www.bigcloudsys.cn:8443/about/agreement">我已阅读并同意研发云用户协议</a>
+            </div>
+            <div class="row btn-row">
+                <input type="hidden" name="lt" value="LT-70711-zjPcgbDuz9VyXFfyn7yrRQdGjWdQRi" />
+                <input type="hidden" name="execution" value="e1s1" />
+                <input type="hidden" name="_eventId" value="submit" />
+                <input type="submit" class="sign-btn" name="submit" accesskey="l" value="登录" tabindex="4" />
+            </div>
+            <div class="row btn-row" style="text-align: center;">
+                <a href="https://idmp.bigcloudsys.cn/casmanage/user/goRegister">前往注册</a >
+            </div>
+            <div class="changelink"><input type="hidden" id="J_logintype" name="logintype" value="smscodelogin"></div>
+        </div>
+    </form>
+    <div class="description">说明：请使用邮箱作为账号，OA密码登录。</div>
+
+
+
+
+
+
+
+
+<div class="sign-copyright">
+    <p> </p>
+</div>
+</div>
+<!--[if !IE]> -->
+<script src="/cas/js/jquery.min.js;jsessionid=A108AC44113B82E5F39DD03A20F56ED9-n1" type="text/javascript"></script>
+<!-- <![endif]-->
+<!--[if gte IE 9]>
+<script src="/cas/js/jquery.min.js;jsessionid=A108AC44113B82E5F39DD03A20F56ED9-n1" type="text/javascript"></script>
+<![endif]-->
+<!--[if lt IE 9]>
+<script src="/cas/js/jquery2.min.js;jsessionid=A108AC44113B82E5F39DD03A20F56ED9-n1" type="text/javascript"></script>
+<![endif]-->
+<script type="text/javascript" src="/cas/js/jquerysession.js;jsessionid=A108AC44113B82E5F39DD03A20F56ED9-n1"></script>
+<script type="text/javascript" src="/cas/js/jquery.validate.js;jsessionid=A108AC44113B82E5F39DD03A20F56ED9-n1"></script>
+<script type="text/javascript" src="/cas/js/additional-methods.js;jsessionid=A108AC44113B82E5F39DD03A20F56ED9-n1"></script>
+<script type="text/javascript" src="/cas/js/cas.js;jsessionid=A108AC44113B82E5F39DD03A20F56ED9-n1"></script>
+<script type="text/javascript" src="/cas/js/login.js;jsessionid=A108AC44113B82E5F39DD03A20F56ED9-n1"></script>
+<script type="text/javascript" src="/cas/js/security.js;jsessionid=A108AC44113B82E5F39DD03A20F56ED9-n1"></script>
+</body>
+</html>
+

@@ -1,0 +1,104 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe F:\Program Files (x86)\Yarn\bin\yarn.js add
+
+PATH: 
+  F:\Program Files\cmder\vendor\conemu-maximus5\ConEmu\Scripts;F:\Program Files\cmder\vendor\conemu-maximus5;F:\Program Files\cmder\vendor\conemu-maximus5\ConEmu;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Python38\Scripts\;C:\Python38\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;F:\Program Files (x86)\Office\Lib\xuggler\bin;F:\Program Files (x86)\Yarn\bin\;F:\Program Files (x86)\Microsoft VS Code\bin;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Java\jdk1.8.0_211\bin;F:\JavaEnviroment\apache-maven-3.5.2\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\ProgramData\chocolatey\bin;C:\Program Files\Java\jdk1.8.0_211\bin;F:\Program Files\Android\Sdk\platform-tools;C:\Program Files (x86)\PuTTY\;C:\Program Files\nodejs\;F:\Program Files\Git\cmd;C:\Users\Administrator.WIN-9M659CUL90U\.windows-build-tools\python27\;C:\Users\Administrator.WIN-9M659CUL90U\AppData\Local\Microsoft\WindowsApps;F:\Program Files (x86)\Microsoft VS Code\bin;C:\Users\Administrator.WIN-9M659CUL90U\AppData\Local\Yarn\bin;F:\Program Files\JetBrains\WebStorm 2019.3.3\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;F:\Program Files (x86)\IntelliJ IDEA 2018.3.3\bin;F:\Program Files\Android\Sdk\platform-tools;F:\Program Files (x86)\Fiddler;C:\Windows\Microsoft.NET\Framework64\v4.0.30319;C:\Users\Administrator.WIN-9M659CUL90U\AppData\Roaming\npm;F:\flutter-2.0.4\bin;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;F:\Program Files\Git\cmd;F:\Program Files\Git\mingw64\bin;F:\Program Files\Git\usr\bin;F:\Program Files\cmder\vendor\bin;F:\Program Files\cmder\bin;F:\Program Files\cmder;F:\Program Files\cmder\vendor\git-for-windows\cmd;F:\Program Files\cmder\vendor\git-for-windows\mingw64\bin;F:\Program Files\cmder\vendor\git-for-windows\usr\bin;F:\Program Files\cmder\vendor\bin;F:\Program Files\cmder
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  14.16.0
+
+Platform: 
+  win32 x64
+
+npm manifest: 
+  {
+    "name": "my-app",
+    "productName": "my-app",
+    "version": "0.0.1",
+    "author": "SophieU <j.u.sophia@qq.com>",
+    "description": "An electron-vue project",
+    "license": null,
+    "main": "./dist/electron/main.js",
+    "scripts": {
+      "build": "node .electron-vue/build.js",
+      "build:darwin": "cross-env BUILD_TARGET=darwin node .electron-vue/build.js",
+      "build:linux": "cross-env BUILD_TARGET=linux node .electron-vue/build.js",
+      "build:mas": "cross-env BUILD_TARGET=mas node .electron-vue/build.js",
+      "build:win32": "cross-env BUILD_TARGET=win32 node .electron-vue/build.js",
+      "build:clean": "cross-env BUILD_TARGET=clean node .electron-vue/build.js",
+      "build:web": "cross-env BUILD_TARGET=web node .electron-vue/build.js",
+      "dev": "node .electron-vue/dev-runner.js",
+      "pack": "npm run pack:main && npm run pack:renderer",
+      "pack:main": "cross-env NODE_ENV=production webpack --progress --colors --config .electron-vue/webpack.main.config.js",
+      "pack:renderer": "cross-env NODE_ENV=production webpack --progress --colors --config .electron-vue/webpack.renderer.config.js",
+      "postinstall": ""
+    },
+    "dependencies": {
+      "vue": "^2.5.16",
+      "axios": "^0.18.0",
+      "vue-electron": "^1.0.6",
+      "vue-router": "^3.0.1",
+      "vuex": "^3.0.1",
+      "vuex-electron": "^1.0.0"
+    },
+    "devDependencies": {
+      "ajv": "^6.5.0",
+      "babel-core": "^6.26.3",
+      "babel-loader": "^7.1.4",
+      "babel-plugin-transform-runtime": "^6.23.0",
+      "babel-preset-env": "^1.7.0",
+      "babel-preset-stage-0": "^6.24.1",
+      "babel-register": "^6.26.0",
+      "babel-minify-webpack-plugin": "^0.3.1",
+      "cfonts": "^2.1.2",
+      "chalk": "^2.4.1",
+      "copy-webpack-plugin": "^4.5.1",
+      "cross-env": "^5.1.6",
+      "css-loader": "^0.28.11",
+      "del": "^3.0.0",
+      "devtron": "^1.4.0",
+      "electron": "^2.0.4",
+      "electron-debug": "^1.5.0",
+      "electron-devtools-installer": "^2.2.4",
+      "electron-packager": "^12.1.0",
+      "electron-rebuild": "^1.8.1",
+      "mini-css-extract-plugin": "0.4.0",
+      "file-loader": "^1.1.11",
+      "html-webpack-plugin": "^3.2.0",
+      "multispinner": "^0.2.1",
+      "node-loader": "^0.6.0",
+      "style-loader": "^0.21.0",
+      "url-loader": "^1.0.1",
+      "vue-html-loader": "^1.2.4",
+      "vue-loader": "^15.2.4",
+      "vue-style-loader": "^4.1.0",
+      "vue-template-compiler": "^2.5.16",
+      "webpack-cli": "^3.0.8",
+      "webpack": "^4.15.1",
+      "webpack-dev-server": "^3.1.4",
+      "webpack-hot-middleware": "^2.22.2",
+      "webpack-merge": "^4.1.3"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Missing list of packages to add to your project.
+      at new MessageError (F:\Program Files (x86)\Yarn\lib\cli.js:186:110)
+      at Object.<anonymous> (F:\Program Files (x86)\Yarn\lib\cli.js:40587:13)
+      at Generator.next (<anonymous>)
+      at step (F:\Program Files (x86)\Yarn\lib\cli.js:98:30)
+      at F:\Program Files (x86)\Yarn\lib\cli.js:116:14
+      at new Promise (<anonymous>)
+      at new F (F:\Program Files (x86)\Yarn\lib\cli.js:23451:28)
+      at Object.<anonymous> (F:\Program Files (x86)\Yarn\lib\cli.js:95:12)
+      at Object.run (F:\Program Files (x86)\Yarn\lib\cli.js:40599:19)
+      at run (F:\Program Files (x86)\Yarn\lib\cli.js:89113:20)
